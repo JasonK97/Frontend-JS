@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+}
+
+#form {
+    align-content: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+#send {
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 44px 5px 44px;
+    background-color: white;
+    color: black;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+}
