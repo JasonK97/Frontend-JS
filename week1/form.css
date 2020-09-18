@@ -24,9 +24,14 @@ h1 {
 input {
     border: 1px solid black;
     border-radius: 5px;
+    /* margin-left: 20%;
+    margin-right: 20%; */
+
 }
 
 textarea {
     border: 1px solid black;
     border-radius: 5px;
+    /* margin-left: 20%;
+    margin-right: 20%; */
 }

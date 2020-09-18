@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Writer</title>
+    <style>
+        textarea {
+            width: 800px;
+            height: 250px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Story Writer!</h1>
+    Story Name:<input id="nameInput"></input>
+    <section>
+        <button onclick="loadStory()">Find and Edit It</button>
+        <button onclick="saveStory()">Save It</button>
+        <button onclick="displayStory()">Display It</button>
+    </section>
+    <textarea id="storyEditor" placeholder="Write a totally rad story here..."></textarea>
+    <p id="storyDisplay"></p>
+</body>
+
+<script>
+    function loadStory() {
+        var storyName = document.getElementById('nameInput').value;
+        var storySaved = localStorage.getItem(storyName);
+        document.getElementById('storyEditor').value = storySaved;
+        console.log('Story Loaded');
+    }
+    function saveStory() {
+        var storyName = document.getElementById('nameInput').value;
+        var storySaved = document.getElementById('storyEditor').value;
+        localStorage.setItem(storyName, storySaved);
+        console.log('Story Saved');
+    }
+    function displayStory() {
+        var storySaved = document.getElementById('storyEditor').value;
+        document.getElementById('storyDisplay').innerHTML = storySaved;
+        console.log('Story Displayed');
+    }
+</script>
+
+</html>
