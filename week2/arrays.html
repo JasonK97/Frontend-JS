@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Practice</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const color = "teal";
+
+    function doSomething() {
+        var one = "one";
+        if(one) {
+            var two = "two";
+            var three = "three";
+        }
+        console.log(one);
+        console.log(two);
+        console.log(three);
+    }
+
+    doSomething();
+
+    const colors = ["red", "blue", "green", "yellow", "orange"];
+    const adjectives = [
+        "bold",
+        "shy",
+        "strong",
+        "lazy",
+        "round",
+        "flat",
+        "old"
+    ];
+    const nouns = [
+        "bike",
+        "cat",
+        "plate",
+        "computer",
+        "student",
+        "car",
+        "house"
+    ];
+    const numbers = [1, 4, 7, 34, 54, 243, 67, 89, 21, 12345];
+    // const ships = [];
+
+    // for loop to traverse an array
+    for (var i = 0; i < nouns.length; i++) {
+        console.log(nouns[i]);
+    }
+
+    // console.dir() for arrays
+    console.dir(nouns);
+
+    // forEach
+    function log(message) {
+        console.log(message);
+    }
+    nouns.forEach(log);
+
+    function log2(message, index) {
+        console.log(index, message);
+    }
+    nouns.forEach(log);
+
+    // ex of map: negative numbers
+    function negative(num) {
+        return num * -1;
+    }
+
+    const negative2 = function(num) {
+        return num * -1;
+    }
+
+    const negative3 = (num) => num * -1;
+
+    console.log(negative(3));
+    console.log(negative2(4));
+    console.log(negative3(5));
+
+    // ex of map with arrow function
+    const negNumbers = numbers.map((num) => num * -1);
+
+    // filter example with indexOf to do a substring search
+
+    // random number generation
+    console.log(Math.floor(Math.random() * 6) + 1);
+    // Math.floor(Math.random() * range) + offset);
+
+
+</script>
+</html>
