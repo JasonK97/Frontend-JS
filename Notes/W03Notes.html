@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 03 Notes</title>
+</head>
+<body>
+    <h1>Objects in JavaScript</h1>
+    <p>You can shorthand objects with methods which is pretty cool.</p>
+    <code>user = {
+        sayHi() {
+          alert("Hello");
+        }
+      };</code>
+    <p>Then you can call it: <code>user.sayHi();</code></p>
+
+    <h1>"This"</h1>
+    <p>Using "this" in code is a really good way to be able to use specific
+        information in an object for methods.</p>
+    <p>I've mostly used it in calling JavaScript functions that take an arguement,
+        and that arguement is some input that the user will put in.</p>
+    <p>Something cool about using <code>this</code> in JavaScript is that it is unbound.</br>
+        It can be used in any function.</p>
+    <p>Arrow functions are special: they don’t have their “own” <code>this</code>. 
+        If we reference <code>this</code> from such a function, it’s taken from the outer “normal” function.</p>
+
+    <h1>Events</h1>
+    <p>Events are things like clicks or changes to something.</p>
+    <p>There are things called Event Listeners that monitor and wait for events to happen</p>
+    <p>Event Listeners are used to trigger something when specific things happen that the developers
+        want to keep an eye out for.</p>
+    <p>Many common Event Listeners are placed on buttons, so that they do something specific when clicked.
+        They can save information, or even do math!</p>
+    <p>These are inline elments you can add like <code>onclick="clicked()"</code> and will call the function
+        <code>clicked()</code> when the button gets clicked.</p>
+</body>
+</html>
