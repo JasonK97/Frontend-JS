@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Notes</title>
+</head>
+<body>
+    <h1>Object Oriented Programming with JavaScript</h1>
+    <h2>Encapsulation</h2>
+    <p>In Object Oriented Programming, Encapsulation keeps all the programming <br />
+        logic inside an object as well as all the methods, without the outside <br />
+        world needing to know how it’s done.</p>
+    <h2>Polymorphism</h2>
+    <p>In Object Oriented Programming, Polymorphism means that various objects <br />
+        can share the same method, but also have the ability to override shared <br />
+        methods with a more specific implementation.</p>
+    <h2>Inheritance</h2>
+    <p>Inheritance allows for the taking the features of one object then adding <br />
+        some new features. In Object Oriented Programming, this means we can take <br />
+        an object that already exists and inherit all its properties and methods. <br />
+        We can then improve on its functionality by adding new properties and methods.</p>
+    <h2>Classes</h2>
+    <p>JavaScript didn't have classes before ES6, and used the concept of using <br />
+        actual objects as the blueprint for creating more objects. This is known <br />
+        as aprototype-basedlanguage. Even though ES6 now supports classes, it <br />
+        still uses this prototypal inheritance model in the background.</p>
+    <h2>Constructors</h2>
+    <p>In the objects chapter earlier in the book, we saw it was possible to create <br />
+        new objects using the object literal notation. At the end of the chapter we <br />
+        created a dice object: <br /><br />
+
+        <code>const dice = {<br />
+            sides: 6,<br />
+            roll() {<br />
+                return Math.floor(this.sides * Math.random() + 1)<br />
+            }    <br />
+        }</code><br /><br />
+        An alternative way to create objects is to use aconstructor function.<br />
+        
+        This is a function that defines the properties and methods of an object. Here is the <br />
+        dice example rewritten as a constructor function:<br /><br />
+        
+        <code>const Dice = function(sides=6){<br />
+            this.sides = sides;<br />
+            this.roll = function() {<br />
+                return Math.floor(this.sides * Math.random() + 1)<br />
+            }<br />
+        }</code><br /><br />
+        The keyword this is used to represent the object that will be returned by the constructor <br />
+        function. In the previous example, we use it to set the sides property to the argument <br />
+        that is provided to the constructor function, or 6, if no argument is provided. It also <br />
+        adds a method called roll() , which returns a random number from 1 up to the number of sides the dice has.<br /><br />
+        
+        We can now create aninstanceof the dice constructor function using the new operator.</p>
+</body>
+</html>
