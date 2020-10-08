@@ -1,0 +1,19 @@
+.hor {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+.vert {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    padding: 20px 20px 20px 20px;
+}
+
+td:hover {
+    background-color: rgb(184, 183, 183);
+}
