@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 | Notes</title>
+</head>
+<body>
+    <h1>Errors, Exceptions, and Warnings</h1>
+    <ul>
+        <li>System error ― there’s a problem with the system or external devices with which the program is interacting.</li>
+        <li>Programmer error ― the program contains incorrect syntax or faulty logic; it could even be as simple as a typo.</li>
+        <li>User error ― the user has entered data incorrectly, which the program is unable to handle.</li>
+    </ul>
+    <p>As programmers, we often have little influence over how external systems work, <br />
+        so it can be difficult to fix the root cause of system errors. Despite this, <br />
+        we should still be aware of them and attempt to reduce their impact by working <br />
+        around any problems they cause. Programmer errors are our responsibility, so <br />
+        we must ensure they are minimized as much as possible and fixed promptly. </p>
+    <h1>Exceptions</h1>
+    <p>An exception is an error that produces a return value that can then be used by the program to deal with the error.</p>
+    <h1>Stack Traces</h1>
+    <p>An exception will also produce astack trace. This is a sequence of functions or method <br />
+        calls that lead to the point where the error occurred. It’s often not just a single <br />
+        function or method call that causes an error. A stack trace will work backwards from <br />
+        the point at which the error occurred to identify the original function or method that <br />
+        started the sequence.</p>
+    <h1>Warnings</h1>
+    <p>Warnings are fine, we ignore them (just kidding)<br />
+        A warning can occur if there’s an error in the code that isn't enough to cause the program <br />
+        to crash. This means the program will continue to run after a warning. This might sound good, <br />
+        but it can be problematic, since the issue that produced the warning may cause the program to <br />
+        continue running incorrectly.</p>
+    <h1>Strict Mode</h1>
+    <p>ECMAScript 5 introduced a strict mode that produces more exceptions and warnings and prohibits <br />
+        the use of some deprecated features. This is due to the fact that strict mode considers coding <br />
+        practices that were previously accepted as just being 'poor style' as actual errors. <br />
+        <br />
+        Increasing the chance of errors might seem like a bad idea at first, but it’s much better to <br />
+        spot errors early on, rather than have them cause problems later. Writing code in strict mode <br />
+        can also help improve its clarity and speed, since it follows conventions and will throw <br />
+        exceptions if any sloppy code practices are used.<br />
+        <br />
+        Not using strict mode is often referred to as 'sloppy mode' as it’s forgiving of sloppy programming <br />
+        practices. Strict mode encourages a better quality of JavaScript to be written that befits a ninja <br />
+        programmer, so its use is recommended.</p>
+    <h1>Debugging in the Browser</h1>
+    <p>Debugging is the process of finding out where bugs occur in the code and then dealing with them. In <br />
+        many cases, the point at which an error occurs is not always where it originated, so you’ll need to <br />
+        run through the program to see what’s happening at different stages of its execution. When doing this, <br />
+        it can be useful to create what are known as breakpoints, which halt the progress of the code and allow <br />
+        us to view the value of different variables at that point in the program. There are a number of options <br />
+        for debugging JavaScript code in the browser.</p>
+</body>
+</html>
