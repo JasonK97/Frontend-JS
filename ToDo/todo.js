@@ -7,20 +7,24 @@ var todos = [];
 function saveTodos(key) {
     saveToLS(key, todos);
 }
+
 class Todo {
     constructor(parentId, key) {
         this.listElement = qs(parentId);
         this.key = key;
+        this.displayAllTodos(todos);
     }
 
-    addNewTodo(text, key) {
-        const newTodo = {
+    addNewTodo(text) {
+        var newTodo = {
             id: new Date(),
             text: text,
             completed: false
         }
+        console.log(newTodo);
+        console.log(todos);
         todos.push(newTodo);
-        saveTodos(key);
+        saveTodos(this.key);
     }
 
     getText() {
@@ -28,21 +32,15 @@ class Todo {
     }
 
     completeTodo(todo) {
-
-    }
-
-    z() {
-        console.log("wast");
-        document.getElementById("label").innerText = "test";
+        this.completed = true;
     }
 
     clearTodos() {
 
     }
 
-    a() {
-        console.log("check");
-        return false;
+    getTodos() {
+        return todos;
     }
 
     displayAllTodos(key) {
@@ -59,28 +57,24 @@ class Todo {
                 text.textContent = element.text;
                 text.class = "text";
                 //checkmark button
-                let checkButt = this.configureCheckButt(element);
+                let checkBtn = this.configureCheckBtn(element);
                 //delete button
-                let deleteButt = this.configureDeleteButt(element);
+                let deleteBtn = this.configureDeleteBtn(element);
 
-                //   deleteButt.onclick = function() { this.z(); };
-                console.log(deleteButt.onclick);
-                // deleteButt.onclick = function() {
-                //     console.log("asdfhj");
-                // };
                 //div to hold everything
                 let div = this.configureDiv();
                 //adding the check button, text, and delete button to the div
-                // div.appendChild(checkButt);
-                // div.appendChild(text);
-                // div.appendChild(deleteButt);
-                div.innerHTML = checkButt.outerHTML + text.outerHTML + deleteButt.outerHTML;
+                div.innerHTML = checkBtn.outerHTML + text.outerHTML + deleteBtn.outerHTML;
 
                 //adding the div to the bullet and the bullet to the list
                 list.appendChild(div);
             }
         }
+    }
 
+    z() {
+        console.log("wast");
+        document.getElementById("label").innerText = "test";
     }
 
     configureDiv() {
@@ -90,31 +84,28 @@ class Todo {
         return div;
     }
 
-    configureDeleteButt(element) {
-        let deleteButt = document.createElement("button");
-        deleteButt.textContent = "Delete";
-        deleteButt.classList.add('deleteButt');
+    configureDeleteBtn(element) {
+        let deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.classList.add('deleteBtn');
 
-        deleteButt.display = "inline-flex";
-        deleteButt.setAttribute('onClick', 'this.z');
+        deleteBtn.display = "inline-flex";
+        deleteBtn.setAttribute('onclick', 'this.z');
 
-        deleteButt.class = "deleteButt";
-        return deleteButt;
+        deleteBtn.class = "deleteBtn";
+        return deleteBtn;
     }
-    configureCheckButt(element) {
-        let checkButt = document.createElement("button");
-        checkButt.textContent = "Check Off";
-        checkButt.display = "inline-flex";
-        checkButt.classList.add('checkButt');
-        checkButt.setAttribute('onClick', 'this.a');
 
-        checkButt.class = "checkButt";
-        return checkButt;
+    configureCheckBtn(element) {
+        let checkBtn = document.createElement("button");
+        checkBtn.textContent = "Check Off";
+        checkBtn.display = "inline-flex";
+        checkBtn.classList.add('checkBtn');
+        checkBtn.setAttribute('onClick', 'this.a');
+
+        checkBtn.class = "checkBtn";
+        return checkBtn;
     }
-}
-
-function tester() {
-    console.log("test");
 }
 
 export default Todo;
