@@ -7,29 +7,7 @@ body {
     text-align: center;
 }
 
-.todoList {
-    text-align: left;
-    border: 1px solid #eeeeee;
-    padding: 5px;
-    margin-bottom: 20px;
-}
-
-.taskItem {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.checker {
-    width: 30px;
-    height: 30px;
-    margin-top: 9px;
-}
-
-
-/*********************************************************/
-
-.e {
+.item {
     display: flex;
     flex-direction: row;
     height: 150px;
@@ -37,12 +15,7 @@ body {
     padding-left: 35%;
 }
 
-#outerDiv {
-    text-align: center;
-}
-
-.e>p {
-    /* background-color: #0000; */
+.item>p {
     width: 200px;
     margin: 10px;
     text-align: center;
@@ -53,11 +26,19 @@ body {
 }
 
 .checkBtn {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 30px;
+}
+
+.checkBtn:hover {
+    background-color: rgb(29, 146, 0);
 }
 
 .deleteBtn {
     width: 70px;
-    height: 70px;
+    height: 20px;
+}
+
+.deleteBtn:hover {
+    background-color: rgb(146, 0, 0);
 }

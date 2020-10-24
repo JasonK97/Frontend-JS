@@ -2,8 +2,6 @@ import { getFromLS, qs, setClick } from './utilities.js';
 
 const myTodo = new Todo("#todoList", "todos");
 
-// let Button = qs('#addButton');
-// Button.addEventListener('click', addButton);
 setClick('#addButton', addButton);
 qs('body').addEventListener('onload', myTodo.displayAllTodos(myTodo.key));
 
@@ -13,7 +11,7 @@ function addButton() {
     console.log(inputValue);
     myTodo.addNewTodo(inputValue /*, myTodo.key*/ );
     myTodo.displayAllTodos(myTodo.key);
-    qs('task').value = "";
+    inputValue = "";
 }
 
 import Todo from "./todo.js";

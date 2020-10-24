@@ -52,34 +52,29 @@ class Todo {
             list.innerHTML = "";
             for (let index = 0; index < todos.length; index++) {
                 let element = todos[index];
-                //grabbing the text from the todo object
                 let text = document.createElement("p");
                 text.textContent = element.text;
                 text.class = "text";
-                //checkmark button
                 let checkBtn = this.configureCheckBtn(element);
-                //delete button
                 let deleteBtn = this.configureDeleteBtn(element);
-
-                //div to hold everything
                 let div = this.configureDiv();
-                //adding the check button, text, and delete button to the div
                 div.innerHTML = checkBtn.outerHTML + text.outerHTML + deleteBtn.outerHTML;
-
-                //adding the div to the bullet and the bullet to the list
                 list.appendChild(div);
             }
         }
     }
 
-    z() {
-        console.log("wast");
-        document.getElementById("label").innerText = "test";
+    deleteTask() {
+        console.log("delete?");
+    }
+
+    checkOff(task) {
+        console.log("check off?");
     }
 
     configureDiv() {
         let div = document.createElement("div");
-        div.classList.add('e');
+        div.classList.add('item');
         div.display = "flex";
         return div;
     }
@@ -88,24 +83,31 @@ class Todo {
         let deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
         deleteBtn.classList.add('deleteBtn');
-
         deleteBtn.display = "inline-flex";
-        deleteBtn.setAttribute('onclick', 'this.z');
-
+        deleteBtn.setAttribute('onclick', this.deleteTask);
         deleteBtn.class = "deleteBtn";
         return deleteBtn;
     }
 
     configureCheckBtn(element) {
         let checkBtn = document.createElement("button");
-        checkBtn.textContent = "Check Off";
+        checkBtn.textContent = "Completed?";
         checkBtn.display = "inline-flex";
         checkBtn.classList.add('checkBtn');
-        checkBtn.setAttribute('onClick', 'this.a');
-
+        checkBtn.setAttribute('onclick', 'checkOff(this)');
         checkBtn.class = "checkBtn";
         return checkBtn;
     }
 }
+
+// var classname = document.getElementsByClassName("deleteBtn");
+
+// var del = function() {
+//     console.log('crap');
+// }
+
+// for (var i = 0; i < classname.length; i++) {
+//     classname[i].addEventListener('click', del);
+// }
 
 export default Todo;
