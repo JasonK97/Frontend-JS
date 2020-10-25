@@ -13,6 +13,7 @@ class Todo {
         this.listElement = qs(parentId);
         this.key = key;
         this.displayAllTodos(todos);
+        var todos = [];
     }
 
     addNewTodo(text) {
