@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 | Notes</title>
+</head>
+
+<body style="text-align: center;">
+    <a href="../index.html">Back to List</a> | 
+    <a href="../week7/hiking-complete.html">Weekly Code</a>
+    <h1>Further Functions</h1>
+    <h2>Custom Properties</h2>
+    <p>There is nothing to stop you adding your own properties to functions in the <br />
+        same way that you can add properties to any object in JavaScript.</p>
+    <h2>Memoization</h2>
+    <p>If a function takes some time to compute a return value, we can save the result <br />
+        in a cache property. Then if the same argument is used again later, we can <br />
+        return the value from the cache, rather than having to compute the result again. <br />
+        For example, say squaring a number was an expensive computational operation that <br />
+        took a long time.</p>
+    <h2>Immediately Invoked Function Expression</h2>
+    <p>An Immediately Invoked Function Expression– or IIFE – (pronounced 'iffy') is an <br />
+        anonymous function that, as the name suggests, is invoked as soon as it’s defined. <br />
+        This is easily achieved by placing parentheses at the end of the function definition <br />
+        (remember we use parentheses to invoke a function).</p>
+    <h2>Temporary Variables</h2>
+    <p>There is no way to remove a variable from a scope once it’s been declared. If a variable <br />
+        is only required temporarily, it may cause confusion if it’s still available later in <br />
+        the code. Even worse, the name of the variable may clash with another piece of code <br />
+        (an external JavaScript library, for example) resulting in errors. Placing any code that <br />
+        uses the temporary variable inside an IIFE will ensure it’s only available while the IIFE <br />
+        is invoked, then it will disappear. The example that follows uses an IIFE to swap the <br />
+        value of two global variables, a and b .</p>
+    <h2>Creating a Promise</h2>
+    <p>A promise is created using a constructor function. This takes a function called anexecutoras <br />
+        an argument. The executor initializes the promise and starts the asynchronous operation. <br />
+        It also accepts two functions as arguments: the resolve() function is called if the <br />
+        operation is successful, and the reject() function is called if the operation fails.</p>
+    <h1>AJAX</h1>
+    <h2>The Fetch API</h2>
+    <p>The XMLHttpRequest object was finally standardized by the WHATWG and W3C as part of the <br />
+        HTML5 specification, despite it originally being implemented by Microsoft many years <br />
+        earlier, and already available in most browsers.<br />
+        <br />
+        It has since been superseded by theFetch API, which is currently a living standard for <br />
+        requesting and sending data asynchronously across a network. The Fetch API uses promises <br />
+        to avoid callback hell, and also streamlines a number of concepts that had become cumbersome <br />
+        when using the XMLHttpRequest object.</p>
+    <h2>Response Interface</h2>
+    <p>The Fetch API introduced the Response interface that deals with the object that’s returned when <br />
+        the promise is fulfilled. Response objects have a number of properties and methods that allow <br />
+        us to process the response effectively.<br />
+        <br />
+        For example, each response object has an ok property that checks to see if the response is <br />
+        successful. This is based on theHTTP status code, which can be accessed using the status property. <br />
+        This will usually be 200 if the response was successful, 201 if a resource was created, or 204 <br />
+        when the request is successful but no content is returned. The ok property will return true if the <br />
+        status property is between 200 and 299. We need to manually check if this happens because the <br />
+        promise will only be rejected in the case of a network error, rather than something like a '404 <br />
+        page not found error', which is still considered a successful request in terms of the promise.</p>
+    <h2>File Responses</h2>
+    <p>The blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once <br />
+        it has read the whole file, it returns a promise that resolves with a blob object.</p>
+    <h2>JSON Responses</h2>
+    <p>JSON is probably the most common format for AJAX responses. The json() method is used to deal <br />
+        with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.<br />
+        <br />
+        Again, this is very similar to the earlier examples, except this response returns some JSON data <br />
+        that is then resolved as a JavaScript object. This means we can manipulate the object using <br />
+        JavaScript. In the example below, the Object.entries() method is used to view the key and value <br />
+        pairs in the returned object.</p>
+    <h2>Request Interface</h2>
+    <p>We can get more fine-grained control over the request being made by providing a Request object as <br />
+        an argument. This allows a number of options to be set about the request.<br />
+        <br />
+        Request objects are created using the Request() constructor, and include the following properties:</p>
+        <ul>
+            <li>url – The URL of the requested resource (the only property that is required).</li>
+            <li>method – a string that specifies which HTTP method should be used for the request. By default, this is 'GET'.</li>
+            <li>headers – This is a Headers object (see later section) that provides details of the request's headers.</li>
+            <li>mode – Allows you to specify if CORS is used or not. CORS is enabled by default.</li>
+            <li>cache – Allows you to specify how the request will use the browser's cache. For example, you can force <br />
+                it to request a resource and update the cache with the result, or you can force it to only look in the <br />
+                cache for the resource.</li>
+            <li>credentials – Lets you specify if cookies should be allowed with the request.</li>
+            <li>redirect – Specifies what to do if the response returns a redirect. There’s a choice of three values: <br />
+                'follow' (the redirect is followed), 'error' (an error is thrown) or 'manual' (the user has to click <br />
+                on a link to follow the redirect).</li>
+        </ul>
+</body>
+
+</html>
