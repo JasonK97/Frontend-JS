@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 08 Notes</title>
+</head>
+
+<body style="text-align: center;">
+    <a href="../index.html">Back to List</a> |
+    <a href="../week8/teamAct.html">Weekly Code</a>
+    <h1>Transforms</h1>
+    <p>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on <br />
+        the page. While some of these effects were possible using previously existing CSS features (such as<br />
+        translating with relative and absolute positioning), CSS3 gives you unprecedented control over many <br />
+        more aspects of the element’s appearance.<br />
+        <br />
+        We can manipulate an element’s appearance usingtransform functions. The value of the transform property <br />
+        is one or more transform functions (separated by spaces) that will be applied in the order they’re provided. <br />
+        In this book, we’ll cover all the two-dimensional transform functions.</p>
+    <h1>Translate</h1>
+    <p>Translation functions allow you to move elements left, right, up, or down. These functions are similar <br />
+        to the behavior of position: relative; when declaring top and left , moving elements up and down or <br />
+        left and right along the x and y axes. When you employ a translation function, you’re moving elements <br />
+        without impacting the flow of the document. Unlike position: relative , which allows you to position an <br />
+        element either against its current position or against a parent or other ancestor, a translated element <br />
+        can only be moved relative to its current position.<br />
+        <br />
+        The translate(x,y) function moves an element x from the left, and y from the top:<br />
+        <br />
+        <code>transform: translate(45px, -45px);</code></p>
+    <h1>Scaling</h1>
+    <p>The scale(x,y) function scales an element by the defined factors horizontally then vertically. If only <br />
+        one value is provided, it will be used for both the x and y values, growing or shrinking your element <br />
+        or pseudo-element while maintaining the original aspect ratio. For example, scale(1) would leave the <br />
+        element the same size, scale(2) would double its proportions, scale(0.5) would halve them, and so on. <br />
+        Providing different values will distort the element, as you’d expect:<br />
+        <br />
+        <code>transform: scale(1.5, 0.25);</code><br />
+        <br />
+        As with translate , you can also use the scaleX(x) or scaleY(y) functions. These functions will scale <br />
+        only the horizontal dimensions or only the vertical dimensions respectively.</p>
+    <h1>Rotation</h1>
+    <p>The rotate() function rotates an element around the point of origin by a specified angle value. As with <br />
+        scale , by default the point of origin is the element’s center. Generally, angles are declared in <br />
+        degrees, with positive degrees moving clockwise and negative moving counterclockwise. In addition to<br />
+        degrees, values can be provided in grads, radians, or turns, but we’ll just be sticking with degrees.</p>
+    <h1>Skew</h1>
+    <p>The skew(x,y) function specifies a skew along the x and y axes. As you’d expect, the x specifies the <br />
+        skew on the x axis, and the y specifies the skew on the y axis. If the second parameter is omitted, <br />
+        the skew will only occur on the x axis:<br />
+        <br />
+        <code>transform: skew(15deg, 4deg);</code></p>
+    <h1>Canvas</h1>
+    <p>With HTML5’s Canvas API, we can draw anything we can imagine, all through JavaScript. This can improve <br />
+        the performance of our websites by avoiding the need to download images off the network. With canvas, <br />
+        we can draw shapes and lines, arcs and text, gradients and patterns. In addition, canvas gives us the <br />
+        power to manipulate pixels in images and even video. We’ll start by introducing some of the basic drawing <br />
+        features of canvas, but then move on to using its power to transform our video—taking our modern-looking <br />
+        color video and converting it into conventional black and white to match the overall look and feel of<br />
+        The HTML5 Herald.</p>
+    <h1>Getting the Context</h1>
+    <p>Once we’ve stored our canvas element in a variable, we then set up the canvas’scontext. The context is <br />
+        the place where your drawing is rendered. Currently, there’s only wide support for drawing to a <br />
+        two-dimensional context. The W3C Canvas spec defines the context in the CanvasRenderingContext2D interface. <br />
+        Most methods we’ll be using to draw onto the canvas are defined in this interface.</p>
+    <h1>Coordinates</h1>
+    <p>The Canvas uses coordinates to help in drawing things.</p>
+</body>
+
+</html>

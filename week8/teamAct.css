@@ -1,0 +1,26 @@
+ul {
+    list-style: none;
+    padding-top: 20px;
+    min-width: 300px;
+    table-layout: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div {
+    padding: 10px;
+    margin: 0 auto;
+}
+
+li {
+    padding: 10px;
+    padding-top: 30px;
+    border: solid;
+    height: 60px;
+    width: 60px;
+    /* display: table-cell; */
+}
+
+/* ul:hover {
+    transform:translateX(300);
+} */
