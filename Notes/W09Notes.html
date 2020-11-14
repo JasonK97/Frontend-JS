@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 03 Notes</title>
+</head>
+
+<body style="text-align: center;">
+    <a href="../index.html">Back to List</a> |
+    <a href="../week9/index-START.html">Weekly Code</a>
+    <h1>Dialogs</h1>
+    <p>The window.confirm() method will stop the execution of the program and display a confirmation <br />
+        dialog that shows the message provided as an argument, and giving the options of OK or Cancel. <br />
+        It returns the boolean values of true if the user clicks OK, and false if the user clicks Cancel.<br />
+        <br />
+        The window.prompt() method will stop the execution of the program. It displays a dialog that <br />
+        shows a message provided as an argument, as well as an input field that allows the user to enter <br />
+        text. This text is then returned as a string when the user clicks OK. If the user clicks Cancel, <br />
+        null is returned.</p>
+    <h1>Browser Info</h1>
+    <p>The window object has a number of properties and methods that provide information about the user’s browser.</p>
+    <h1>History</h1>
+    <p>The window.history property can be used to access information about any previously visited pages in <br />
+        the current browser session. Avoid confusing this with the new HTML5 History API. <br />
+        (See http://www.sitepoint.com/javascript-history-pushstate/ post for details.)<br />
+        <br />
+        The window.history.length property shows how many pages have been visited before arriving at the <br />
+        current page.<br />
+        <br />
+        The window.history.go() method can be used to go to a specific page, where 0 is the current page.</p>
+    <h1>The data- Attribute</h1>
+    <p>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored <br />
+        by the browser. They’re also private to a page, so are not intended to be used by an external service <br />
+        – their sole purpose is to be used by a JavaScript program. This means they’re perfect for adding data <br />
+        that can be used as a hook that the program utilizes to access information about a particular element <br />
+        on the page.</p>
+    <h1>HTML5 APIs</h1>
+    <p>The HTML5 specification contains a number of APIs that help to gain access to hardware, such as <br />
+        cameras, batteries, geolocation, and the graphics card. Hardware evolves quickly, and APIs are <br />
+        frequently introduced to give developers access, and control new features that appear in the latest <br />
+        devices.</p>
+    <h1>Web Storage</h1>
+    <p>The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies <br />
+        but has fewer restrictions, more storage capacity, and is generally easier to use. This makes it perfect <br />
+        for storing information about users, as well as storing application-specific information that can then <br />
+        be used during future sessions.<br />
+        <br />
+        The Web Storage API has some crucial differences with cookies:<br />
+        <br />
+        <ul>
+            <li>Information stored isnotshared with the server on every request.</li>
+            <li>Information is available in multiple windows of the browser (but only if the domain is the same).</li>
+            <li>Storage capacity limit is much larger than the 4KB limit for cookies ( There is no actual limit in the specification, but most browsers have a limit set at 5GB per domain.).</li>
+            <li>Any data stored does not automatically expire as it does with cookies. This potentially makes cookies a better choice for something like showing a popup once a day.</li>
+        </ul>
+        <br />
+        If a browser supports the Web Storage API, the window object will have a property called localStorage, <br />
+        which is a native object with a number of properties and methods used to store data. The information <br />
+        is saved in the form of key-value pairs, and the values can only be strings. There is also a <br />
+        sessionStorage object that works in the same way, although the data is only saved for the current session.</p>
+</body>
+
+</html>
