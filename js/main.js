@@ -1,7 +1,7 @@
 function listStuff() {
     var list = document.getElementById('list');
-    var arrayList = ['./Notes/W01story.html', './Notes/W02Notes.html', './Notes/W03Notes.html', './Notes/W04Notes.html', './Notes/W05Notes.html', './ToDo/todo.html', './Notes/W07Notes.html', './Notes/W08Notes.html', './Notes/W09Notes.html'];
-    var arrayName = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'To Do Project', 'Week 7', 'Week 8', 'Week 9'];
+    var arrayList = ['./Notes/W01story.html', './Notes/W02Notes.html', './Notes/W03Notes.html', './Notes/W04Notes.html', './Notes/W05Notes.html', './ToDo/todo.html', './Notes/W07Notes.html', './Notes/W08Notes.html', './Notes/W09Notes.html', './Notes/W10Notes.html'];
+    var arrayName = ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'To Do Project', 'Week 7', 'Week 8', 'Week 9', 'Week 10'];
 
     for (let i = 0; i < arrayList.length; i++) {
         const element = arrayList[i];
