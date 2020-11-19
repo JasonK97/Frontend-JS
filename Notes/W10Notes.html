@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Notes</title>
+</head>
+
+<body style="text-align: center;">
+    <a href="../index.html">Back to List</a> |
+    <a href="../week10/index.html">Weekly Code</a>
+    <h1>Form Validation</h1>
+    <p>When you enter data, the browser and/or the web server will check to see that the data is in <br />
+        the correct format and within the constraints set by the application. Validation done in the <br />
+        browser is called client-side validation, while validation done on the server is called server-side <br />
+        validation. In this chapter we are focusing on client-side validation.<br />
+        <br />
+        If the information is correctly formatted, the application allows the data to be submitted to <br />
+        the server and (usually) saved in a database; if the information isn't correctly formatted, it <br />
+        gives the user an error message explaining what needs to be corrected, and lets them try again.<br />
+        <br />
+        We want to make filling out web forms as easy as possible.<br />
+        <br />
+        CS 213 and 313 helped a lot with Form validation.</p>
+    <h1>Fetch API</h1>
+    <p>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP <br />
+        pipeline, such as requests and responses. It also provides a global fetch() method that provides <br />
+        an easy, logical way to fetch resources asynchronously across the network.<br />
+        <br />
+        This kind of functionality was previously achieved using XMLHttpRequest. Fetch provides a better <br />
+        alternative that can be easily used by other technologies such as Service Workers. Fetch also provides <br />
+        a single logical place to define other HTTP-related concepts such as CORS and extensions to HTTP.<br />
+        <br />
+    <ul>The fetch specification differs from jQuery.ajax() in three main ways:
+        <li>The Promise returned from fetch() won’t reject on HTTP error status even if the response is an HTTP 404 or<br />
+            500. Instead, it will resolve normally (with ok status set to false), and it will only reject on network<br />
+            failure or if anything prevented the request from completing.</li>
+        <li>fetch() won't can receive cross-site cookies; you can’t can establish a cross site session using fetch.<br />
+            Set-Cookie headers from other sites are silently ignored.</li>
+        <li>fetch won’t send cookies, unless you set the credentials init option. (Since Aug 25, 2017. The spec changed<br />
+            the default credentials policy to same-origin.</li>
+        </p>
+    </ul>
+</body>
+
+</html>
